@@ -1,37 +1,7 @@
+# python-social-auth 
+This project demonstrates the python-social-auth functionality. For more details on `python-social-auth`, refer to http://python-social-auth.readthedocs.org/en/latest/. This project specifically features logins with three social accounts, namely Google, Twitter and Facebook. Full writeup of the steps necessary can be found at https://goo.gl/bKxrQ8. For Google and Twitter, this project will also feature the 'friends' - 'Circle' and 'Following'. 
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Welcome to your Django project on Cloud9 IDE!
-
-Your Django project is already fully setup. Just click the "Run" button to start
-the application. On first run you will be asked to create an admin user. You can
-access your application from 'https://socialauthtest-neoashley.c9.io/' and the admin page from 
-'https://socialauthtest-neoashley.c9.io/admin'.
-
-## Starting from the Terminal
-
-In case you want to run your Django application from the terminal just run:
-
-1) Run syncdb command to sync models to database and create Django's default superuser and auth system
-
-    $ python manage.py syncdb
-
-2) Run Django
-
-    $ python manage.py runserver $IP:$PORT
-    
-## Support & Documentation
-
-Django docs can be found at https://www.djangoproject.com/
-
-You may also want to follow the Django tutorial to create your first application:
-https://docs.djangoproject.com/en/1.7/intro/tutorial01/
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+### Requirements
+1. `sudo pip install python-social-auth` or `sudo easy_install python-social-auth`
+2. `sudo pip install django-bootstrap3` or `sudo easy_install django-bootstrap3`
+3. `sudo pip install oauth2` or `sudo easy_install oauth2`
