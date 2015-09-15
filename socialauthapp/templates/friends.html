@@ -1,0 +1,26 @@
+<ol>
+{%for friend in goofriends%}
+    <li><a href='{{friend.url}}'>{{friend.displayName}}<img src='{{friend.image.url}}'></a></li>
+{%endfor%}
+
+
+
+{% for friend in twfriends %}
+    <li>{{friend.screen_name}}<img src='{{friend.profile_image_url_https}}'></a>
+    
+    {{friend.status.text}}
+    <!--<ul>-->
+    <!--    {%for url in friend.urls%}-->
+    <!--    <li>-->
+    <!--        {{url.text}}-->
+    <!--    </li>-->
+    <!--    {%endfor%}-->
+    <!--</ul>-->
+    
+    </li>
+    <!--{{ forloop.counter }} {# starting index 1 #}-->
+    <!--{{ forloop.counter0 }} {# starting index 0 #}-->
+
+    <!--do your stuff-->
+{%endfor%}
+</ol>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block main %}
+ <div>
+ <h1>Python Social Auth Demo</h1>
+
+ <p>
+   <ul>
+   {% if user and not user.is_anonymous %}
+     <li>
+       Hello {{ user.get_full_name|default:user.username }}!
+       <img src="{{user.userprofile.photo}}" class="img-account">
+     </li>
+     <li>
+       <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+     </li>
+     
+       <ol>
+     
+     <h3>Your friends</h3>
+     <hr>
+     {%for friend in goofriends%}
+         <li><a href='{{friend.url}}'>{{friend.displayName}}
+              <img src='{{friend.image.url}}'>
+             </a>
+         </li>
+     {%endfor%}
+     
+     {% for friend in twfriends %}
+         <li>{{friend.screen_name}}<img src='{{friend.profile_image_url_https}}'>
+             {{friend.status.text}}
+         </li>
+     {%endfor%}
+     </ol>
+   {% else %}
+     <li>
+       <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+     </li>
+     <li>
+       <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+     </li>
+     <li>
+       <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
+     </li>
+   {% endif %}
+   </ul>
+ </p>
+ </div>
+{% endblock %}
+
