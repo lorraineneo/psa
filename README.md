@@ -5,3 +5,4 @@ This project demonstrates the python-social-auth functionality. For more details
 1. `sudo pip install python-social-auth` or `sudo easy_install python-social-auth`
 2. `sudo pip install django-bootstrap3` or `sudo easy_install django-bootstrap3`
 3. `sudo pip install oauth2` or `sudo easy_install oauth2`
+4. Follow the instructions on https://goo.gl/bKxrQ8 to create the app id and app secret key in Google,Twitter and Facebook. After which, you need to set the corresponding variables within settings.py 
